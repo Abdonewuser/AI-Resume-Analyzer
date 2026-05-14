@@ -101,7 +101,7 @@ function App() {
     formData.append("jd", jd);
     formData.append("resume", file);
 
-    const response = await fetch("http://localhost:5000/upload", {
+    const response = await fetch("https://hirelens-pobx.onrender.com/upload", {
       method: "POST",
       body: formData,
     });
@@ -171,7 +171,7 @@ function App() {
         )}
 
         <button onClick={handleUpload} disabled={loading || !file || !jd}>
-          {loading ? "Analyzing..." : "Analyze Compatibility"}
+          {loading ? "Waking up server, please wait..." : "Analyze Compatibility"}
         </button>
 
         {analysis && (
